@@ -57,7 +57,7 @@ http://en.wikipedia.org/wiki/Pseudocode#Syntax
 NOTES:
 OSCAR!! How do I add video of my programs output?
 Example:
-![Output sample](https://github.com/ajasmin/camstudio-mousedown-hilight/raw/master/android_vid_test.gif)
+![Output sample](https://github.com/ajasmin/camstudio-mousedown-highlight/raw/master/android_vid_test.gif)
 
 
 ```C++
