@@ -39,10 +39,12 @@ Rules:
 What is my code suppose to accomplish?
 The code needs to create two neurons. One neuron will receive a sine wave as input for some amount of time. The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2.
 
-A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. A single neuron can receive input from thousands of other
-neurons, and in turn output information onto thousands of other cells. 
+A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
+that generate differences in ion concentrations between the external and internal parts of the neuron. Neurons tap in to the energy stored in the ion concentration gradients in order to send
+electrical pulses to neighboring cell thereby transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information
+onto thousands of other cells. For the purposes of this model, we will only focus on local connections between 2 neurons.
 
-Neurons are connected in this way...
+Neurons form specialized connections called synapses which allow neurons to receive and send information. 
 Synapse qualities...
 
 OSCAR!! Add more
