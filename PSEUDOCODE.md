@@ -40,11 +40,16 @@ What is my code suppose to accomplish?
 The code needs to create two neurons. One neuron will receive a sine wave as input for some amount of time. The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2.
 
 A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
-that generate differences in ion concentrations between the external and internal parts of the neuron. Neurons tap in to the energy stored in the ion concentration gradients in order to send
-electrical pulses to neighboring cell thereby transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information
-onto thousands of other cells. For the purposes of this model, we will only focus on local connections between 2 neurons.
+that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
+leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
+becomes excited when the membrane potential become less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cell thereby
+transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
+of this model, we will only focus on local connections between 2 neurons.
 
-Neurons form specialized connections called synapses which allow neurons to receive and send information. 
+Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
+the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
+excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins on the postsynaptic neuron and allow positive ions to
+rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell.
 Synapse qualities...
 
 OSCAR!! Add more
