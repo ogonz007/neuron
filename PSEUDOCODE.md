@@ -48,9 +48,12 @@ of this model, we will only focus on local connections between 2 neurons.
 
 Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
 the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
-excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins on the postsynaptic neuron and allow positive ions to
-rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell.
-Synapse qualities...
+excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
+rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
+inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
+neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
+
+
 
 OSCAR!! Add more
 
