@@ -57,12 +57,15 @@ Below is a cartoon showing the synaptic connection between two neurons:
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
 
 
-
 Based on the breif description of some of the properties of a neuron, we will generate some code that will model a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
 Neuron 1 will the send an electrical pulse to Neuron 2. This signal will results in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons are forming
 recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon.gif)
+
+The equations above are the dynamical equations defining this type of neuron model where x is the membrane potential, n is discrete time, and y is the slow variable *** Tiffany, not actually clear as to
+what y is ***. The sigma is the external DC current driving the neurons, and the alpha is a nonlinear parameter which, in combinitaiton with sigma, generate the dynamical state of the neuron. In this
+model, the neurons will be resting.
 
 2. Flowchart pseudocode
 OSCAR!! See example in link
