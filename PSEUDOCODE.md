@@ -52,6 +52,9 @@ excitatory neurotransmitter, glutamate for example, is released at the synapse, 
 rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
 inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
 neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
+Below is a cartoon showing the synaptic connection between two neurons:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
 
 
 
