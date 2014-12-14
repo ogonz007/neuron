@@ -63,10 +63,6 @@ recurrent connections with each other. A cartoon representation of the small neu
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
 
-The equations above are the dynamical equations defining this type of neuron model where x is the membrane potential, n is discrete time, and y is the slow variable *** Tiffany, not actually clear as to
-what y is ***. The sigma is the external DC current driving the neurons, and the alpha is a nonlinear parameter which, in combinitaiton with sigma, generate the dynamical state of the neuron. In this
-model, the neurons will be resting.
-
 2. Flowchart pseudocode
 OSCAR!! See example in link
 http://www.owlnet.rice.edu/~ceng303/manuals/fortran/FOR3_3.html
