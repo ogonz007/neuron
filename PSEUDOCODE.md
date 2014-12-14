@@ -1,11 +1,8 @@
 Why and How to Use Pseudocode
 simple_model.cxx
 =============================
-simple_model.cxx
-simple_model.cxx
 
 Authors
-simple_model.cxx
 ---------
 Tiffany Glenn-Hall
 
@@ -13,21 +10,26 @@ Oscar Gonzalez
 
 Why use pseudocode?
 -------------------
-Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (example one). You also need to consider the flow of information and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together and you have a complete essay (see the function program).
+Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (example one). You also need to consider the flow of information and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together and you have a complete essay (see the functional program).
 
 What are some advantages of pseudocode?
 <ol>
   <li>Explain your code to non-programmers</li>
-  <li>Use it as a way of determining objects in your code (help with OOP)</li>
+  <li>Use it to get comments/suggestions from other programmers</li>
   <li>Use it to determine the best logic for your code</li>
-  <li>Communicate your ideas to gain opinions/suggestions from other programmers</li>
+  <li>Use it as a way of determining objects in your code (help with OOP)</li>
+  <li>Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)</li>
 </ol>
 
 Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example.
 
+Our example will be of a relatively simple neuronal circuit model. If you are interested in neuroscience or would like an explanation of some of the terms we use please read the section at the end titled "Background".
+
 Examples of pseudocode and when to use them
 -------------------------------------------
-1. Write your code out in your written/verbal language.
+<ol>
+  <li>Write your code out in your written/verbal language.</li>
+</ol>
 Rules:
 <ol>
   <li>Write so it is easy for others to understand</li>
@@ -39,36 +41,23 @@ Rules:
 What is my code suppose to accomplish?
 The code needs to create two neurons. One neuron will receive a sine wave as input for some amount of time. The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2.
 
-A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
-that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
-leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
-becomes excited when the membrane potential become less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cell thereby
-transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
-of this model, we will only focus on local connections between 2 neurons.
+```
+define how long we want to calculate the neurons' responses
+define neurons
+    initialize neurons
+define connectivity (synapses) between neurons
+```
 
-Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
-the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
-excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
-rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
-inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
-neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
-Below is a cartoon showing the synaptic connection between two neurons:
-
-![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
-
-
-Based on the breif description of some of the properties of a neuron, we will generate some code that will model a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
-Neuron 1 will the send an electrical pulse to Neuron 2. This signal will results in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons are forming
-recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
-
-![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
-
-2. Flowchart pseudocode:
+<ol start="2">
+  <li>Flowchart pseudocode:</li>
+</ol>
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
 
-3. This example of pseudocode is mostly full of code
+<ol start="3">
+  <li>This example of pseudocode is mostly full of code</li>
+</ol>
 ```C++
 void fun
 {
@@ -94,10 +83,13 @@ void fun
 
 ```
 
-Here is an example of the data generated by the modeled neurons:
 
-![Output sample](https://github.com/ogonz007/neuron/blob/master/Neuron.gif)
+Our Final Code
+--------------
 
+When look at this code consider how we used our pseudocode to develop it and some of the weaknesses it still has.
+How would this code break if we had more than one cell for each cell type?
+How would this code break if we had different numbers of cell type 1 and cell type 2?
 
 ```C++
 #include <stdio.h>
@@ -303,3 +295,34 @@ int main(int argc, char **argv)
 } //end main
 
 ```
+Our Code Output plotted in MATLAB and made into a gif
+-----------------------------------------------------
+Here is an example of the data generated by the modeled neurons:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/Neuron.gif)
+
+Background
+-------------------------------------------
+A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
+that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
+leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
+becomes excited when the membrane potential become less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cell thereby
+transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
+of this model, we will only focus on local connections between 2 neurons.
+
+Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
+the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
+excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
+rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
+inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
+neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
+Below is a cartoon showing the synaptic connection between two neurons:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
+
+
+Based on the breif description of some of the properties of a neuron, we will generate some code that will model a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
+Neuron 1 will the send an electrical pulse to Neuron 2. This signal will results in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons are forming
+recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
