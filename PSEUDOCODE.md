@@ -63,7 +63,8 @@ recurrent connections with each other. A cartoon representation of the small neu
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
 
-2. Flowchart pseudocode
+2. Flowchart pseudocode:
+
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
 
