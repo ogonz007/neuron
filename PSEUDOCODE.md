@@ -59,6 +59,11 @@ Below is a cartoon showing the synaptic connection between two neurons:
 
 
 OSCAR!! Add more
+Based on the breif description of some of the properties of a neuron, we will generate some code that will model a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
+Neuron 1 will the send an electrical pulse to Neuron 2. This signal will results in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons are forming
+recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon.tif)
 
 2. Flowchart pseudocode
 OSCAR!! See example in link
