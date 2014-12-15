@@ -1,12 +1,5 @@
 Why and How to Use Pseudocode
-simple_model.cxx
 =============================
-
-Authors
----------
-Tiffany Glenn-Hall
-
-Oscar Gonzalez
 
 Why use pseudocode?
 -------------------
@@ -27,9 +20,16 @@ Our example will be of a relatively simple neuronal circuit model. If you are in
 
 Examples of pseudocode and when to use them
 -------------------------------------------
+### 1. Write your code out in your written/verbal language
+
+Strengths of this kind of pseudocode:
 <ol>
-  <li>Write your code out in your written/verbal language.</li>
+  <li>This is greate for communicating with non-programmers</li>
+  <li>It will allow you to think through your program and come up with your initial logic</li>
+  <li>When things are separated by lines it may indicate they should be an object (OOP)</li>
+  <li>Being separated by a line may also mean you should build a test for it and then create it (TDD)</li>
 </ol>
+
 Rules:
 <ol>
   <li>Write so it is easy for others to understand</li>
@@ -38,25 +38,70 @@ Rules:
   <li>Start your pseudocode with what your code is suppose to accomplish</li>
 </ol>
 
-What is my code suppose to accomplish?
-The code needs to create two neurons. One neuron will receive a sine wave as input for some amount of time. The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2.
-
 ```
-define how long we want to calculate the neurons' responses
+What is my code suppose to accomplish?
+The code needs to create two neurons. One neuron will receive a sine wave as input for some amount of time. 
+The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2.
+
+define how long we want to calculate the neurons' responses (total iterations)
 define neurons
     initialize neurons
-define connectivity (synapses) between neurons
+define connectivity between neurons
+define synapses
+while time is less than the total time we want to calculate the neurons' responses
+    calculate the synaptic current at each active synapse
+    calculate the state of each cell
+        if this cell type receives external input
+            add external input to synaptic activity then calculate activity of the cell
+        else
+            calculate activity of the cell given its synaptic activity
+    print external input and neuronal activity to files
 ```
 
-<ol start="2">
-  <li>Flowchart pseudocode:</li>
+### 2. Flowchart pseudocode
+
+Strengths of this kind of pseudocode:
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+
+Rules:
+<ol>
+  <li>Separate different components by using different symbols to indicate:</li>
+  <ul>
+    <li>the begging and end of the program</li>
+    <li>input and output of the program</li>
+    <li>assignment of a value to a variable, constant, or parameter</li>
+    <li>a point where a decision is made</li>
+    <li>beginning of a repitition</li>
+    <li>algorithms specified outside of the program</li>
+    <li>direction and order of execution (I prefer arrows for this)</li>
+  </ul>
 </ol>
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
-
 <ol start="3">
-  <li>This example of pseudocode is mostly full of code</li>
+  <li>This example of pseudocode is mostly full of code</li> 
+</ol>
+
+Strengths of this kind of pseudocode:
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol>
+
+Rules:
+<ol>
+  <li>Write so it is easy for other programmers to understand</li>
+  <li>Write so you can walk away from this project, pick it up another day and be able to understand your plan</li>
+  <li></li>
+  <li></li>
 </ol>
 ```C++
 void fun
@@ -88,9 +133,10 @@ Our Final Code
 --------------
 
 When look at this code consider how we used our pseudocode to develop it and some of the weaknesses it still has.
-How would this code break if we had more than one cell for each cell type?
-How would this code break if we had different numbers of cell type 1 and cell type 2?
-
+<ul>
+  <li>How would this code break if we had more than one cell for each cell type?</li>
+  <li>How would this code break if we had different numbers of cell type 1 and cell type 2?</li>
+</ul>
 ```C++
 #include <stdio.h>
 #include <stdlib.h> 
@@ -218,7 +264,7 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
                 ampa_CT1CT2[i][j].calc(g_ampa_CT1CT2/cellType1[i].S_CX_DEND, cellType1[i].x, cellType2[j].spike);
                 IsynCT1CT2[i] += ampa_CT1CT2[i][j].I;
         }
-        if(C_CT1CT2[j][i] == true){
+        if(C_CT2CT1[j][i] == true){
                 ampa_CT2CT1[j][i].calc(g_ampa_CT2CT1/cellType2[j].S_CX_DEND, cellType2[j].x, cellType1[i].spike);
                 IsynCT2CT1[j] += ampa_CT2CT1[j][i].I;
         }
