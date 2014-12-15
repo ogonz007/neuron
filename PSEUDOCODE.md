@@ -26,7 +26,7 @@ Examples of pseudocode and when to use them
 
 Strengths of this kind of pseudocode:
 <ol>
-  <li>This is greate for communicating with non-programmers</li>
+  <li>This is great for communicating with non-programmers</li>
   <li>It will allow you to think through your program and come up with your initial logic</li>
   <li>When things are separated by lines it may indicate they should be an object (OOP)</li>
   <li>Being separated by a line may also mean you should build a test for it and then create it (TDD)</li>
@@ -71,14 +71,14 @@ Strengths of this kind of pseudocode:
 <ol>
   <li>This is particularly useful if you are working in a brownfield program, where you need to consider how your additions to the program will co-exist with previous code</li>
   <li>Makes you think through the logical flow of your program</li>
-  <li>Can help you see where using a function may be naturally benefitial to the architecture of your program</li>
+  <li>Can help you see where using a function may be naturally beneficial to the architecture of your program</li>
 </ol>
 
 Rules:
 <ol>
   <li>Separate different components by using different symbols to indicate:</li>
   <ul>
-    <li>the begging and end of the program</li>
+    <li>the beginning and end of the program</li>
     <li>input and output of the program</li>
     <li>assignment of a value to a variable, constant, or parameter</li>
     <li>a point where a decision is made</li>
@@ -135,7 +135,7 @@ void fun
 Our Final Code
 --------------
 
-When look at this code consider how we used our pseudocode to develop it and some of the weaknesses it still has.
+When looking at this code consider how we used our pseudocode to develop it and some of the weaknesses it still has.
 <ul>
   <li>How would this code break if we had more than one cell for each cell type?</li>
   <li>How would this code break if we had different numbers of cell type 1 and cell type 2?</li>
