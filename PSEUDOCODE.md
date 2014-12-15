@@ -3,7 +3,7 @@ Why and How to Use Pseudocode
 
 Why use pseudocode?
 -------------------
-Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (example one). You also need to consider the flow of information and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together and you have a complete essay (see the functional program).
+Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (example one). You also need to consider the flow of information, and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in, and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together, and you have a complete essay (see the functional program).
 
 What are some advantages of pseudocode?
 <ol>
@@ -40,15 +40,15 @@ Rules:
 
 ```
 What is my code suppose to accomplish?
-The code needs to create two neurons. One neuron will receive a sine wave as input for some amount of time. 
-The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2.
+The code needs to create two neurons. One neuron will receive a sine wave as a stimulating input for a certain amount of time. 
+The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2 (see Background section for image).
 
 define how long we want to calculate the neurons' responses (total iterations)
 define neurons
     initialize neurons
 define connectivity between neurons
 define synapses
-while time is less than the total time we want to calculate the neurons' responses
+while time is less than the total time, we want to calculate the neurons' responses
     calculate the synaptic current at each active synapse
     calculate the state of each cell
         if this cell type receives external input
