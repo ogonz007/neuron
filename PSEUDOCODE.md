@@ -103,7 +103,7 @@ Rules:
 <ol>
   <li>Write so it is easy for other programmers to understand</li>
   <li>Write so you can walk away from this project, pick it up another day and be able to understand your plan</li>
-  <li></li>
+  <li>This is almost complete code, so use all or almost all the formatting you normally would</li>
   <li></li>
 </ol>
 ```C++
