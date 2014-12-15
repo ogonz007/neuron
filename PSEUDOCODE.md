@@ -84,9 +84,8 @@ Rules:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
-<ol start="3">
-  <li>This example of pseudocode is mostly full of code</li> 
-</ol>
+
+### 3. This example of pseudocode is mostly full of code
 
 Strengths of this kind of pseudocode:
 <ol>
@@ -354,7 +353,7 @@ that generate differences in ion concentrations between the external and interna
 leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
 becomes excited when the membrane potential become less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cell thereby
 transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
-of this model, we will only focus on local connections between 2 neurons.
+of this model, we only focus on local connections between 2 neurons.
 
 Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
 the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
@@ -367,8 +366,8 @@ Below is a cartoon showing the synaptic connection between two neurons:
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
 
 
-Based on the breif description of some of the properties of a neuron, we will generate some code that will model a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
-Neuron 1 will the send an electrical pulse to Neuron 2. This signal will results in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons are forming
+Based on the breif description of some of the properties of a neuron, we generated some code that models a small network of two neurons. Neuron 1 receives a breif excitatory sine wave stimulus.
+Neuron 1 then sends an electrical pulse to Neuron 2. This signal results in the excitation of Neuron 2 which then sends a signal back to Neuron 1. In this sense, the two neurons are forming
 recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
