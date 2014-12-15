@@ -36,6 +36,7 @@ Rules:
   <li>Write so you can walk away from this project, pick it up another day and be able to understand your plan</li>
   <li>Write related ideas without blank line between them, put blank lines between ideas that are less/not related</li>
   <li>Start your pseudocode with what your code is suppose to accomplish</li>
+  <li>Indent if using flow control (loops, if/else...)</li>
 </ol>
 
 ```
@@ -44,17 +45,21 @@ The code needs to create two neurons. One neuron will receive a sine wave as a s
 The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2 (see Background section for image).
 
 define how long we want to calculate the neurons' responses (total iterations)
-define neurons
+
+define regular spiking neurons
     initialize neurons
+    
 define connectivity between neurons
-define synapses
+define AMPA synapses
+
 while time is less than the total time, we want to calculate the neurons' responses
     calculate the synaptic current at each active synapse
     calculate the state of each cell
         if this cell type receives external input
-            add external input to synaptic activity then calculate activity of the cell
+            add external input (sin wave) to synaptic activity then calculate activity of the cell
         else
             calculate activity of the cell given its synaptic activity
+            
     print external input and neuronal activity to files
 ```
 
@@ -62,10 +67,9 @@ while time is less than the total time, we want to calculate the neurons' respon
 
 Strengths of this kind of pseudocode:
 <ol>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
+  <li>This is particularly useful if you are working in a brownfield program, where you need to consider how your additions to the program will co-exist with previous code</li>
+  <li>Makes you think through the logical flow of your program</li>
+  <li>Can help you see where using a function may be naturally benefitial to the architecture of your program</li>
 </ol>
 
 Rules:
@@ -89,8 +93,8 @@ Rules:
 
 Strengths of this kind of pseudocode:
 <ol>
-  <li></li>
-  <li></li>
+  <li>Communicating with other programmers to get opinions/suggestions</li>
+  <li>Allows you to think through difficult algorithms across multiple days without blindly coding</li>
   <li></li>
   <li></li>
 </ol>
