@@ -89,7 +89,7 @@ Rules:
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
 
-### 3. This example of pseudocode is mostly full of code
+### 3. Code based pseudocode
 
 Strengths of this kind of pseudocode:
 <ol>
