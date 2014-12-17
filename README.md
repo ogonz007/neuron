@@ -34,9 +34,13 @@ Strengths of this kind of pseudocode:
 Rules:
 <ol>
   1. Write so it is easy for others to understand
+
   2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
+
   3. Write related ideas without blank line between them, put blank lines between ideas that are less/not related
+
   4. Start your pseudocode with what your code is suppose to accomplish
+
   5. Indent if using flow control (loops, if/else...)
 </ol>
 
