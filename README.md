@@ -24,13 +24,13 @@ In order to understand exactly what the program should ultimately do, we should 
 A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
 that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
 leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
-becomes excited when the membrane potential become less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cell thereby
+becomes excited when the membrane potential becomes less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cells, thereby
 transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
-of this model, we only focus on local connections between 2 neurons.
+of this model, we focus on local connections between 2 neurons.
 
-Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
-the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
-excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
+Neurons form specialized connections called synapses which allow them to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
+the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters) from the presynaptic neuron. When the
+excitatory neurotransmitter, glutamate for example, is released from the presynaptic neuron into the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
 rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
 inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
 neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
@@ -39,15 +39,15 @@ Below is a cartoon showing the synaptic connection between two neurons:
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
 
 
-Based on the breif description of some of the properties of a neuron, we will generate some code that will model a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
+Based on the brief description of some neuronal properties, we will generate code that models a small network of two neurons. Neuron 1 will receive a breif excitatory sine wave stimulus.
 Neuron 1 will then send an electrical pulse to Neuron 2. This signal will result in the excitation of Neuron 2 which will then send a signal back to Neuron 1. In this sense, the two neurons will form
 recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
 
-With this basic understanding of neuron properties, we can now begin constructing pseudocode which will help us transition from biological facts to artifical neurons. <- Need some help with this wording!!!
+With this basic understanding of neuron properties, we can now begin constructing pseudocode which will help us transition from biological facts to a model of neuronal interaction.
 
-Four different types of pseudocode
+Three different types of pseudocode
 -------------------------------------------
 ### 1. Write your code out in your written/verbal language
 
@@ -70,8 +70,9 @@ Rules:
 
 ```
 What is my code supposed to accomplish?
-The code needs to create two neurons. One neuron will receive a sine wave as a stimulating input for a certain amount of time. 
-The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2 (see Background section for image).
+The code needs to create two neurons. One neuron will receive a sine wave as a stimulating input for 
+a certain amount of time. The neurons will have recursive excitatory synapses... meaning: 
+sin_wave -> neuron1 <-> neuron2 (see Background section for image).
 
 define how long we want to calculate the neurons' responses (total iterations)
 
@@ -118,9 +119,9 @@ Rules:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
-Up to this point, we have an a good idea of what the program should do, in what order certain operations should be done, and have visualized the flow of information through
-the program. We now have what we need to start writing code based pseudocode. We will use the information from the previous pseudocode examples to generate code based pseudocode for 
-one main functions of the final working program.
+Up to this point, we have had a good idea of what the program should do, in what order certain operations should be done, and have visualized the flow of information through
+the program. We will use information from the previous pseudocode examples to generate code based pseudocode for 
+one function of the final working program.
 
 ### 3. Code based pseudocode
 
@@ -138,7 +139,8 @@ Rules:
   3. This is almost complete code, so use all or almost all the formatting you normally would
 
 ```C++
-void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], bool (&C_CT2CT1)[nCT1][nCT2], AMPAmap1 (&ampa_CT1CT2)[nCT1][nCT2],AMPAmap1 (&ampa_CT2CT1)[nCT1][nCT2])
+void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], 
+  bool (&C_CT2CT1)[nCT1][nCT2], AMPAmap1 (&ampa_CT1CT2)[nCT1][nCT2],AMPAmap1 (&ampa_CT2CT1)[nCT1][nCT2])
 {
 	for(i = 0; i < ncellType1; i++){
 		IsynCT1CT2 = 0.0; //synaptic current from cell1 -> cell2
@@ -162,8 +164,7 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 
 ```
 
-Here, we have provided an example of code based pseudocode for one of the functions in the fully working program below. This type of pseudocode should be generated for each function and class
-needed in the final working program. The final working version of the above function should be very similar to the above pseudocode example.
+Here, we have provided an example of code based pseudocode for one of the functions in the fully working program below. This type of pseudocode should be generated for particularly difficult algorithms or functions. You will use this code based pseudocode to easily transfer to code, you can track how we did that in the final code presented next.
 
 Our Final Code
 --------------
@@ -172,6 +173,7 @@ When looking at this code consider how we used our pseudocode to develop it and 
 
   * How would this code break if we had more than one cell for each cell type?
   * How would this code break if we had different numbers of cell type 1 and cell type 2?
+  * Based on our pseudocode how could we have broken up our function fun() even more?
 
 ```C++
 #include <stdio.h>
@@ -285,7 +287,8 @@ double apply_DC_pulse(int t, double silence){
 
 //-----------function to evaluate the Rhs of all the maps---
 template<size_t nCT1, size_t nCT2>
-void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], bool (&C_CT2CT1)[nCT1][nCT2], AMPAmap1 (&ampa_CT1CT2)[nCT1][nCT2],AMPAmap1 (&ampa_CT2CT1)[nCT1][nCT2]){
+void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], 
+  bool (&C_CT2CT1)[nCT1][nCT2], AMPAmap1 (&ampa_CT1CT2)[nCT1][nCT2],AMPAmap1 (&ampa_CT2CT1)[nCT1][nCT2]){
 
   unsigned i, j;
   double IsynCT1CT2[ncellType1];
@@ -297,11 +300,13 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
     IsynCT2CT1[i] = 0.0;
     for(j = 0; j < ncellType2; j++){
         if(C_CT1CT2[i][j] == true){
-                ampa_CT1CT2[i][j].calc(g_ampa_CT1CT2/cellType1[i].S_CX_DEND, cellType1[i].x, cellType2[j].spike);
+                ampa_CT1CT2[i][j].calc(g_ampa_CT1CT2/cellType1[i].S_CX_DEND, cellType1[i].x, 
+                  cellType2[j].spike);
                 IsynCT1CT2[i] += ampa_CT1CT2[i][j].I;
         }
         if(C_CT2CT1[j][i] == true){
-                ampa_CT2CT1[j][i].calc(g_ampa_CT2CT1/cellType2[j].S_CX_DEND, cellType2[j].x, cellType1[i].spike);
+                ampa_CT2CT1[j][i].calc(g_ampa_CT2CT1/cellType2[j].S_CX_DEND, cellType2[j].x, 
+                  cellType1[i].spike);
                 IsynCT2CT1[j] += ampa_CT2CT1[j][i].I;
         }
     } //for j
