@@ -7,13 +7,13 @@ Pseudocode may sound like a generic concept, but you can think of it as an outli
 
 
 What are some advantages of pseudocode?
-<ol>
+
   1. Explain your code to non-programmers
   2. Use it to get comments/suggestions from other programmers
   3. Use it to determine the best logic for your code
   4. Use it as a way of determining objects in your code (help with OOP)
   5. Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)
-</ol>
+
 
 Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example.
 
@@ -34,13 +34,9 @@ Strengths of this kind of pseudocode:
 Rules:
 <ol>
   1. Write so it is easy for others to understand
-
   2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
-
   3. Write related ideas without blank line between them, put blank lines between ideas that are less/not related
-
   4. Start your pseudocode with what your code is suppose to accomplish
-
   5. Indent if using flow control (loops, if/else...)
 </ol>
 
