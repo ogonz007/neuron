@@ -24,21 +24,21 @@ Examples of pseudocode and when to use them
 ### 1. Write your code out in your written/verbal language
 
 Strengths of this kind of pseudocode:
-<ol>
+
   1. This is great for communicating with non-programmers
   2. It will allow you to think through your program and come up with your initial logic
   3. When things are separated by lines it may indicate they should be an object (OOP)
   4. Being separated by a line may also mean you should build a test for it and then create it (TDD)
-</ol>
+
 
 Rules:
-<ol>
+
   1. Write so it is easy for others to understand
   2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
   3. Write related ideas without blank line between them, put blank lines between ideas that are less/not related
   4. Start your pseudocode with what your code is suppose to accomplish
   5. Indent if using flow control (loops, if/else...)
-</ol>
+
 
 ```
 What is my code suppose to accomplish?
@@ -67,25 +67,24 @@ while time is less than the total time, we want to calculate the neurons' respon
 ### 2. Flowchart pseudocode
 
 Strengths of this kind of pseudocode:
-<ol>
-  <li>This is particularly useful if you are working in a brownfield program, where you need to consider how your additions to the program will co-exist with previous code</li>
-  <li>Makes you think through the logical flow of your program</li>
-  <li>Can help you see where using a function may be naturally beneficial to the architecture of your program</li>
-</ol>
+
+  1. This is particularly useful if you are working in a brownfield program, where you need to consider how your additions to the program will co-exist with previous code
+  2. Makes you think through the logical flow of your program
+  3. Can help you see where using a function may be naturally beneficial to the architecture of your program
+
 
 Rules:
-<ol>
-  <li>Separate different components by using different symbols to indicate:</li>
-  <ul>
-    <li>the beginning and end of the program</li>
-    <li>input and output of the program</li>
-    <li>assignment of a value to a variable, constant, or parameter</li>
-    <li>a point where a decision is made</li>
-    <li>beginning of a repitition</li>
-    <li>algorithms specified outside of the program</li>
-    <li>direction and order of execution (I prefer arrows for this)</li>
-  </ul>
-</ol>
+
+  1. Separate different components by using different symbols to indicate:</li>
+  
+    * the beginning and end of the program
+    * input and output of the program
+    * assignment of a value to a variable, constant, or parameter
+    * a point where a decision is made
+    * beginning of a repitition
+    * algorithms specified outside of the program
+    * direction and order of execution (I prefer arrows for this)
+  
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
