@@ -15,11 +15,9 @@ What are some advantages of pseudocode?
   5. Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)
 
 
-Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example.
+Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example. Our example will be of a relatively simple neuronal circuit model. If you are interested in neuroscience or would like an explanation of some of the terms we use please read the section at the end titled "Background".
 
-Our example will be of a relatively simple neuronal circuit model. If you are interested in neuroscience or would like an explanation of some of the terms we use please read the section at the end titled "Background".
-
-Examples of pseudocode and when to use them
+Four different types of pseudocode
 -------------------------------------------
 ### 1. Write your code out in your written/verbal language
 
@@ -41,7 +39,7 @@ Rules:
 
 
 ```
-What is my code suppose to accomplish?
+What is my code supposed to accomplish?
 The code needs to create two neurons. One neuron will receive a sine wave as a stimulating input for a certain amount of time. 
 The neurons will have recursive excitatory synapses... meaning: sin_wave -> neuron1 <-> neuron2 (see Background section for image).
 
@@ -105,11 +103,11 @@ Rules:
   3. This is almost complete code, so use all or almost all the formatting you normally would
 
 ```C++
-void fun
+void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (&C_CT1CT2)[nCT1][nCT2], bool (&C_CT2CT1)[nCT1][nCT2], AMPAmap1 (&ampa_CT1CT2)[nCT1][nCT2],AMPAmap1 (&ampa_CT2CT1)[nCT1][nCT2])
 {
-	For(i = 0; i < ncellType1; i++){
-		set IsynCT1CT2 to 0.0; //synaptic current from cell1 -> cell2
-		set IsynCT2CT1 to 0.0; //synaptic current from cell2 -> cell1
+	for(i = 0; i < ncellType1; i++){
+		IsynCT1CT2 = 0.0; //synaptic current from cell1 -> cell2
+		IsynCT2CT1 = 0.0; //synaptic current from cell2 -> cell1
 		For(j = 0; j < ncellType2; j++){
 			If(connection is from cell1 to cell2){
 				calculate ampa_strengthCT1CT2;
@@ -121,7 +119,7 @@ void fun
 			}
 		}
 	}
-	For(i = 0; i < ncellType1; i++){
+	for(i = 0; i < ncellType1; i++){
 		cellType1[i] = calculate_voltageResponse(externalInput(t,0) + IsynCT1CT2[i]);
 		cellType2[i] = calculate_voltageResponse(IsynCT2CT1[i]);
 	}
@@ -134,10 +132,10 @@ Our Final Code
 --------------
 
 When looking at this code consider how we used our pseudocode to develop it and some of the weaknesses it still has.
-<ul>
-  <li>How would this code break if we had more than one cell for each cell type?</li>
-  <li>How would this code break if we had different numbers of cell type 1 and cell type 2?</li>
-</ul>
+
+  * How would this code break if we had more than one cell for each cell type?
+  * How would this code break if we had different numbers of cell type 1 and cell type 2?
+
 ```C++
 #include <stdio.h>
 #include <stdlib.h> 
