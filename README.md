@@ -132,6 +132,8 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 
 ```
 
+Here we have provided an example of code based pseudocode for one of the functions in the fully working program below. This type of pseudocode should be generated for each function and class
+needed in the final working program. The final working version of the above function should be very similar to the above pseudocode example.
 
 Our Final Code
 --------------
