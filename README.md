@@ -145,7 +145,7 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 	for(i = 0; i < ncellType1; i++){
 		IsynCT1CT2 = 0.0; //synaptic current from cell1 -> cell2
 		IsynCT2CT1 = 0.0; //synaptic current from cell2 -> cell1
-		For(j = 0; j < ncellType2; j++){
+		for(j = 0; j < ncellType2; j++){
 			If(connection is from cell1 to cell2){
 				calculate ampa_strengthCT1CT2;
 				IsynCT1CT2 += ampa_strenghtCT1CT2;
