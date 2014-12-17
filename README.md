@@ -75,7 +75,7 @@ Strengths of this kind of pseudocode:
 
 Rules:
 
-  1. Separate different components by using different symbols to indicate:</li>
+  1. Separate different components by using different symbols to indicate:
   
     * the beginning and end of the program
     * input and output of the program
@@ -88,6 +88,9 @@ Rules:
 
 ![Output sample](https://github.com/ogonz007/neuron/blob/master/neuronFlowChart.gif)
 
+Up to this point, we have an a good idea of what the program should do, in what order certain operations should be done, and have visualized the flow of information through
+the program. We now have what we need to start writing code based pseudocode. We will use the information from the previous pseudocode examples to generate code based pseudocode for 
+one main functions of the final working program.
 
 ### 3. Code based pseudocode
 
