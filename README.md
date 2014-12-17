@@ -3,17 +3,16 @@ Why and How to Use Pseudocode
 
 Why use pseudocode?
 -------------------
-Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (example one). You also need to consider the flow of information, and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in, and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together, and you have a complete essay (see the functional program).
+Pseudocode may sound like a generic concept, but you can think of it as an outline of your code. Just like an outline of an essay/research paper you may start out with a simple outline (first example). You also need to consider the flow of information, and move paragraphs around to create the best story (second example). As the essay development continues your outline fills in, and you ultimately end up with a just a few points of concern (third example). Eventually everything comes together, and you have a complete essay (see the fully working program).
 
-If you are comfortable writing programs without pseudocode there is one significant advantage to adding pseudocode to your repitoire... It allows you to think through the entire logic of your code and how it interacts with other parts of the program (if you are working in a brownfield environment). This also helps to ensure that if you are using test-driven development (TDD) you already have a strong image of how all the necessary subcomponents are going to come together, making the refactoring component of TDD simple.
 
 What are some advantages of pseudocode?
 <ol>
-  <li>Explain your code to non-programmers</li>
-  <li>Use it to get comments/suggestions from other programmers</li>
-  <li>Use it to determine the best logic for your code</li>
-  <li>Use it as a way of determining objects in your code (help with OOP)</li>
-  <li>Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)</li>
+  1. Explain your code to non-programmers
+  2. Use it to get comments/suggestions from other programmers
+  3. Use it to determine the best logic for your code
+  4. Use it as a way of determining objects in your code (help with OOP)
+  5. Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)
 </ol>
 
 Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example.
@@ -26,19 +25,19 @@ Examples of pseudocode and when to use them
 
 Strengths of this kind of pseudocode:
 <ol>
-  <li>This is great for communicating with non-programmers</li>
-  <li>It will allow you to think through your program and come up with your initial logic</li>
-  <li>When things are separated by lines it may indicate they should be an object (OOP)</li>
-  <li>Being separated by a line may also mean you should build a test for it and then create it (TDD)</li>
+  1. This is great for communicating with non-programmers
+  2. It will allow you to think through your program and come up with your initial logic
+  3. When things are separated by lines it may indicate they should be an object (OOP)
+  4. Being separated by a line may also mean you should build a test for it and then create it (TDD)
 </ol>
 
 Rules:
 <ol>
-  <li>Write so it is easy for others to understand</li>
-  <li>Write so you can walk away from this project, pick it up another day and be able to understand your plan</li>
-  <li>Write related ideas without blank line between them, put blank lines between ideas that are less/not related</li>
-  <li>Start your pseudocode with what your code is suppose to accomplish</li>
-  <li>Indent if using flow control (loops, if/else...)</li>
+  1. Write so it is easy for others to understand
+  2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
+  3. Write related ideas without blank line between them, put blank lines between ideas that are less/not related
+  4. Start your pseudocode with what your code is suppose to accomplish
+  5. Indent if using flow control (loops, if/else...)
 </ol>
 
 ```
