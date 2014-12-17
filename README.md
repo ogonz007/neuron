@@ -61,6 +61,8 @@ while time is less than the total time, we want to calculate the neurons' respon
             
     print external input and neuronal activity to files
 ```
+Now that we have a general idea of what needs to occur in our program and in what order it should occur, we should now consider how the information should flow in the
+program. In the next example we will show how to create a flowchart of the program to help you think through the logic (if, while, ...) of the program.
 
 ### 2. Flowchart pseudocode
 
