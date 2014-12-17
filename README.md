@@ -11,8 +11,10 @@ What are some advantages of pseudocode?
   1. Explain your code to non-programmers
   2. Use it to get comments/suggestions from other programmers
   3. Use it to determine the best logic for your code
-  4. Use it as a way of determining objects in your code (help with OOP)
+  4. Use it as a way of determining objects in your code (help with OOP)       
+  	http://en.wikipedia.org/wiki/Object-oriented_programming
   5. Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)
+  	http://en.wikipedia.org/wiki/Test-driven_development
 
 
 Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example. Our example will be of a relatively simple neuronal circuit model.
@@ -99,7 +101,7 @@ program. In the next example we will show how to create a flowchart of the progr
 
 Strengths of this kind of pseudocode:
 
-  1. This is particularly useful if you are working in a brownfield program, where you need to consider how your additions to the program will co-exist with previous code
+  1. This is particularly useful if you are working in a brownfield program, where you need to consider how your additions to the program will co-exist with previous code (http://en.wikipedia.org/wiki/Brownfield_(software_development))
   2. Makes you think through the logical flow of your program
   3. Can help you see where using a function may be naturally beneficial to the architecture of your program
 
