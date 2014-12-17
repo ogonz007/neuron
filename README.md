@@ -92,18 +92,18 @@ Rules:
 ### 3. Code based pseudocode
 
 Strengths of this kind of pseudocode:
-<ol>
-  <li>Communicating with other programmers to get opinions/suggestions</li>
-  <li>Allows you to think through difficult algorithms across multiple days without blindly coding</li>
-  <li>Makes for an easy transition to complete code</li>
-</ol>
+
+  1. Communicating with other programmers to get opinions/suggestions
+  2. Allows you to think through difficult algorithms across multiple days without blindly coding
+  3. Makes for an easy transition to complete code
+
 
 Rules:
-<ol>
-  <li>Write so it is easy for other programmers to understand</li>
-  <li>Write so you can walk away from this project, pick it up another day and be able to understand your plan</li>
-  <li>This is almost complete code, so use all or almost all the formatting you normally would</li>
-</ol>
+
+  1. Write so it is easy for other programmers to understand
+  2. Write so you can walk away from this project, pick it up another day and be able to understand your plan
+  3. This is almost complete code, so use all or almost all the formatting you normally would
+
 ```C++
 void fun
 {
