@@ -17,6 +17,34 @@ What are some advantages of pseudocode?
 
 Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example. Our example will be of a relatively simple neuronal circuit model. If you are interested in neuroscience or would like an explanation of some of the terms we use please read the section at the end titled "Background".
 
+Background
+-------------------------------------------
+In order to understand exactly what the program should ultimately do, we should first discuss some basic properties of neurons, and how they influence each other's activity.
+
+A neuron is defined as an electrically excitable cell that can process and transmit information through electrical or chemical signals. The membrane of the neuron contains specialized proteins
+that generate differences in ion concentrations between the external and internal parts of the neuron. This imbalance in ion concentrations between the external and internal parts of the neuron
+leads to a charge difference across the membrane called the membrane potential. When the neuron is at rest, ie. not receiving or transmitting signals, the membrane potential is negative. The neuron
+becomes excited when the membrane potential become less negative. Neurons tap in to the energy stored in the ion concentration gradients in order to send electrical pulses to neighboring cell thereby
+transmitting information from one cell to another. A single neuron can receive input from thousands of other neurons, and in turn output information onto thousands of other cells. For the purposes
+of this model, we only focus on local connections between 2 neurons.
+
+Neurons form specialized connections called synapses which allow neurons to receive and send information. Synapses are said to be either excitatory or inhibitory depending on how it influences
+the activity of the receiving (or postsynaptic) neuron. At excitatory synapses, the postsynaptic neuron is excited by the release of excitatory chemicals (or neurotransmitters). When the
+excitatory neurotransmitter, glutamate for example, is released at the synapse, it will bind to glutamate receptor proteins, AMPA receptors for example, on the postsynaptic neuron and allow positive ions to
+rush into the neuron. This sudden influx of positive ions will cause the membrane potential to become more positive thereby exciting the cell. At inhibitory synapses, the postsynaptic neuron will become
+inhibitied by the release of inhibitory neurotransmitters (ie. GABA) by the presynaptic neuron. The inhibitory neurotransmitter GABA will cross the synapse and bind to GABA receptors on the postsynatpic
+neuron resulting in the influx of negativly charged ions. This influx of negatively charged ions will make the membrane potential more negative and prevent the neuron from sending electrical signals.
+Below is a cartoon showing the synaptic connection between two neurons:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/synapse.gif)
+
+
+Based on the breif description of some of the properties of a neuron, we generated some code that models a small network of two neurons. Neuron 1 receives a breif excitatory sine wave stimulus.
+Neuron 1 then sends an electrical pulse to Neuron 2. This signal results in the excitation of Neuron 2 which then sends a signal back to Neuron 1. In this sense, the two neurons are forming
+recurrent connections with each other. A cartoon representation of the small neural circuit is shown below:
+
+![Output sample](https://github.com/ogonz007/neuron/blob/master/2neuronCartoon_woEqns.gif)
+
 Four different types of pseudocode
 -------------------------------------------
 ### 1. Write your code out in your written/verbal language
@@ -132,7 +160,7 @@ void fun(int t, RS (&cellType1)[ncellType1], RS (&cellType2)[ncellType2], bool (
 
 ```
 
-Here we have provided an example of code based pseudocode for one of the functions in the fully working program below. This type of pseudocode should be generated for each function and class
+Here, we have provided an example of code based pseudocode for one of the functions in the fully working program below. This type of pseudocode should be generated for each function and class
 needed in the final working program. The final working version of the above function should be very similar to the above pseudocode example.
 
 Our Final Code
