@@ -15,7 +15,7 @@ What are some advantages of pseudocode?
   5. Your pseudocode can help you breakdown what to code first and the tests to build for (TDD)
 
 
-Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example. Our example will be of a relatively simple neuronal circuit model. If you are interested in neuroscience or would like an explanation of some of the terms we use please read the section at the end titled "Background".
+Although there are no real rules for pseudocode I will give a couple basic rules I use for each pseudocode example. Our example will be of a relatively simple neuronal circuit model.
 
 Background
 -------------------------------------------
